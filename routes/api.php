@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MandiController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WeatherController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -10,4 +11,5 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {/
 });//-
 Route::get('/commodities', [MandiController::class, 'fetchCommoditiesData']);
 Route::get('/current-weather', [WeatherController::class, 'getCurrentWeather']);
+Route::get('/userlogin-with-otp', [UserController::class, 'userLoginWithMobile']);
 
